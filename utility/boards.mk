@@ -32,10 +32,12 @@ EMCONFIGUTIL := $(XILINX_SDACCEL)/bin/emconfigutil
 ARCH:=X86
 
 ifeq ($(ARCH),POWER)
-DEVICES:= xilinx:adm-pcie-7v3:1ddr-ppc64le
+DEVICES:= xilinx:adm-pcie-7v3:1ddr:3.0
+# DEVICES:= xilinx:adm-pcie-7v3:1ddr-ppc64le
 CXX:=$(XILINX_SDACCEL)/gnu/ppc64le/4.9.3/lnx64/bin/powerpc64le-linux-gnu-g++
 else
-DEVICES:= xilinx:xil-accel-rd-ku115:4ddr-xpr
+DEVICES:= xilinx:adm-pcie-7v3:1ddr:3.0
+# DEVICES:= xilinx:xil-accel-rd-ku115:4ddr-xpr
 CXX:=$(XILINX_SDACCEL)/bin/xcpp
 endif
 
